@@ -1,34 +1,34 @@
 const categories = document.querySelector('#categories');
 
-const itemCategories = categories.children;
-console.log(`Number of categories: ${itemCategories.length}`)
+const getCategoriesChildren = categories.children;
+console.log(`Number of categories: ${getCategoriesChildren.length}`)
 
 // Animals
-const titleAnimals = document.querySelector('h2')
-console.log(`Category: ${titleAnimals.textContent}`)
+const getTitleAnimals = document.querySelector('h2')
+console.log(`Category: ${getTitleAnimals.textContent}`)
 
-const listAnimals = titleAnimals.nextElementSibling;
+const getListAnimals = getTitleAnimals.nextElementSibling;
 
-const itemAnimals = listAnimals.children;
-console.log(`Elements: ${itemAnimals.length}`)
+const getAnimalsEl = getListAnimals.children;
+console.log(`Elements: ${getAnimalsEl.length}`)
 
 // Products
-const titleProducts = itemCategories[1].firstElementChild;
-console.log(`Category: ${titleProducts.textContent}`)
+const getTitleProducts = getCategoriesChildren[1].firstElementChild;
+console.log(`Category: ${getTitleProducts.textContent}`)
 
-const listProducts = titleProducts.nextElementSibling;
+const getListProducts = getTitleProducts.nextElementSibling;
 
-const itemProducts = listProducts.children;
-console.log(`Elements: ${itemProducts.length}`)
+const getProductsEl = getListProducts.children;
+console.log(`Elements: ${getProductsEl.length}`)
 
 // Technologies
 
-const lastCategoryItem = categories.lastElementChild;
+const getLastItemOfCategory = categories.lastElementChild;
 
-const titleTechnologies = lastCategoryItem.firstElementChild;
-console.log(`Category: ${titleTechnologies.textContent}`)
+const getTitleTechnologies = getLastItemOfCategory.firstElementChild;
+console.log(`Category: ${getTitleTechnologies.textContent}`)
 
-const listTechnologies = titleTechnologies.nextElementSibling;
+const getListTechnologies = getTitleTechnologies.nextElementSibling;
 
-const itemTechnologies = listTechnologies.children;
-console.log(`Elements: ${itemTechnologies.length}`)
+const getTechnologiesEl = getListTechnologies.children;
+console.log(`Elements: ${getTechnologiesEl.length}`)
