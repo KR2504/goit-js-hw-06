@@ -3,8 +3,13 @@ const refs = {
     span: document.querySelector('#name-output')
 };
 
+
 refs.input.addEventListener('input', onInputChange);
 
 function onInputChange(event) {
-    return event.currentTarget.value != '' ? refs.span.textContent = event.currentTarget.value : refs.span.textContent = 'Anonymous';
+    refs.span.textContent = event.currentTarget.value;
+    if (event.currentTarget.value === '') {
+        refs.span.textContent = 'Anonymous'
+    }
+    // return event.currentTarget.value === '' ? refs.span.textContent = 'Anonymous' : refs.span.textContent = event.currentTarget.value;
 }

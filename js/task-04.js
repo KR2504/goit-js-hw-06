@@ -7,10 +7,10 @@ let counterValue = 0;
 
 btnDecrement.addEventListener('click', () => {
     counterValue -= 1
-    return value.textContent = counterValue
+    value.textContent = counterValue
 });
 
 btnIncrement.addEventListener('click', () => {
     counterValue += 1
-    return value.textContent = counterValue
+    value.textContent = counterValue
 });

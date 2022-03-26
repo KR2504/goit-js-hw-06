@@ -3,26 +3,17 @@ const refs = {
     span: document.querySelector('.color'),
     body: document.querySelector('body', )
 }
-refs.btn.addEventListener('click', getRandomHexColor);
-refs.btn.addEventListener('click', onChangeSpanText);
+
+
+refs.btn.addEventListener('click', onChangeColor);
 
 function getRandomHexColor() {
-    return refs.body.style.backgroundColor = `#${Math.floor(Math.random() * 16777215)
-    .toString(16)
-      .padStart(6, 0)}`;
-}
-
-function onChangeSpanText() {
-    return refs.span.textContent = `#${Math.floor(Math.random() * 16777215)
+    return `#${Math.floor(Math.random() * 16777215)
     .toString(16)
     .padStart(6, 0)}`;
 }
 
-// function getRandomHexColor() {
-//     let changeColor = refs.body.style.backgroundColor = `#${Math.floor(Math.random() * 16777215)
-//     .toString(16)
-//       .padStart(6, 0)}`;
-//     refs.span.textContent = changeColor
-
-//     return changeColor;
-// }
+function onChangeColor() {
+    refs.body.style.backgroundColor = getRandomHexColor();
+    refs.span.textContent = getRandomHexColor();
+}
