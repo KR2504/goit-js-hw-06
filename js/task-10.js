@@ -12,9 +12,9 @@ const refs = {
 refs.boxes.style.display = 'flex';
 refs.boxes.style.flexWrap = 'wrap';
 
-function createBoxes() {
+function createBoxes(amount) {
     const array = [];
-    for (let i = 1; i <= Number(refs.input.value); i += 1) {
+    for (let i = 1; i <= amount; i += 1) {
         array.push(`<div style = "background-color:${getRandomHexColor()}; width:${20 + i * 10}px; height:${20 + i * 10}px"></div>`)
     }
     refs.boxes.insertAdjacentHTML('afterbegin', array.join(''));
