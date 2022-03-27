@@ -1,11 +1,12 @@
 const refs = {
     btn: document.querySelector('.change-color'),
     span: document.querySelector('.color'),
-    body: document.querySelector('body', )
+    body: document.querySelector('body'),
 }
 
 
 refs.btn.addEventListener('click', onChangeColor);
+
 
 function getRandomHexColor() {
     return `#${Math.floor(Math.random() * 16777215)
@@ -14,6 +15,7 @@ function getRandomHexColor() {
 }
 
 function onChangeColor() {
-    refs.body.style.backgroundColor = getRandomHexColor();
-    refs.span.textContent = getRandomHexColor();
+    const backgroundColor = getRandomHexColor();
+    refs.span.textContent = backgroundColor;
+    refs.body.style.backgroundColor = backgroundColor;
 }

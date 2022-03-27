@@ -11,5 +11,8 @@ function onInputChange(event) {
     if (event.currentTarget.value === '') {
         refs.span.textContent = 'Anonymous'
     }
-    // return event.currentTarget.value === '' ? refs.span.textContent = 'Anonymous' : refs.span.textContent = event.currentTarget.value;
 }
+
+// function onInputChange(event) {
+//     event.currentTarget.value === '' ? refs.span.textContent = 'Anonymous' : refs.span.textContent = event.currentTarget.value;
+// }
